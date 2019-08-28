@@ -1,0 +1,2 @@
+vpc id = vpc-0dcfb46518f1c65ac
+edx-subnet-public-a = subnet-0ad3d2d36fddb267e
