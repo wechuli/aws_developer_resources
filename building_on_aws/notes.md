@@ -65,3 +65,9 @@ What you accomplished this week
 You signed up for an AWS Account
 You launched your first web server into AWS
 You built the virtual network we'll use in upcoming exercises and connected to your EC2 instance
+
+
+AWS-ACCESS_KEY
+AWS_SECRET_KEY
+
+IAM- Identity and Access Management - Access control
