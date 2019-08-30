@@ -71,3 +71,11 @@ AWS-ACCESS_KEY
 AWS_SECRET_KEY
 
 IAM- Identity and Access Management - Access control
+
+You should not use your AWS account root user credentials to access AWS. Instead, create an AWS IAM user and assign permissions only necessary for the work done by the user.
+
+An AWS IAM user is an entity that you create in AWS to represent the person or service that uses it to interact with AWS. You attach permission policies to the IAM user that determines what the user can and cannot do in AWS. Access keys are a combination of an access key ID and a secret access key that are assigned to a user. These can be used to make programmatic calls to AWS when using the API in program code or at a command prompt when using the AWS CLI.
+
+When you create IAM policies, follow the standard security advice of granting least privilege - that is, grannting only the permissions required to perform a task. Determine what users need to do and then craft policies for them that let the users perform only those tasks.
+
+Boto 3 is the AWS SDK for python , making it easier to integrate your Python application, library, or script with AWS services.
