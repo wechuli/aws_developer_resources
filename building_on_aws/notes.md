@@ -79,3 +79,7 @@ An AWS IAM user is an entity that you create in AWS to represent the person or s
 When you create IAM policies, follow the standard security advice of granting least privilege - that is, grannting only the permissions required to perform a task. Determine what users need to do and then craft policies for them that let the users perform only those tasks.
 
 Boto 3 is the AWS SDK for python , making it easier to integrate your Python application, library, or script with AWS services.
+
+## S3
+
+Amazon S3 or Amazon Simple Storage Service is a service offered by AWS that provides object storage through a web service interface.
