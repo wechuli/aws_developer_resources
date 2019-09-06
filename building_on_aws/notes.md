@@ -66,7 +66,6 @@ You signed up for an AWS Account
 You launched your first web server into AWS
 You built the virtual network we'll use in upcoming exercises and connected to your EC2 instance
 
-
 AWS-ACCESS_KEY
 AWS_SECRET_KEY
 
@@ -83,3 +82,9 @@ Boto 3 is the AWS SDK for python , making it easier to integrate your Python app
 ## S3
 
 Amazon S3 or Amazon Simple Storage Service is a service offered by AWS that provides object storage through a web service interface.
+
+## Application Architecture
+
+![](architecture.jpg)
+
+The application is deployed on an Amazon EC2 instance with an Application Load Balancer sitting in front of the instance to direct user requests to the instance. Amazon Cognito is used to sign up/sign in users for the application. In order to asynchronously process the photo labels, when a photo is uploaded, an Amazon S3 bucket event notification is issued to an Amazon SNS topic. This triggers a subscribed AWS Lambda function, which talks to Amazon Rekognition. To make the application more distributed, an Amazon SQS queue subscribed to the Amazon SNS topic stores all the incoming requests and an on-premises application polls the queue for processing. AWS X-Ray traces the calls made to all the AWS resources in this application, thereby providing diagnostics information. The application is coded in Python 3 using AWS Cloud9 as the IDE.
