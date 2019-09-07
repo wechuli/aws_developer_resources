@@ -13,3 +13,7 @@ import os
 
 PHOTOS_BUCKET = os.environ['PHOTOS_BUCKET']
 FLASK_SECRET = os.environ['FLASK_SECRET']
+
+
+# set PHOTOS_BUCKET=awsdeveloperbucket
+# set FLASK_SECRET=blash23330i
